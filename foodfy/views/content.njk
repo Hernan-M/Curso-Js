@@ -4,13 +4,32 @@
 <div class="container-cards">
     {% for card in cards %}
         <div class="card">
-                <div class="img-card">
-                <img src="{cards.imgFood}">
+            <div class="img-card">
+            <img src="{{card.imgFood}}">
+            </div>
+            <div class="content-card">
+                <div class="food-name">
+                    <p>{{card.id}}</p>
                 </div>
-                <div class="content-card">
-                    <h4>{{cards.id}}</h4>
-                    <p>{{cards.autor}}</p>
+                <div class="autor-name">
+                    <p>{{card.autor}}</p>
                 </div>
+            </div>
+        </div>
+    {% endfor %}
+    {% for card in cards %}
+        <div class="card">
+            <div class="img-card">
+            <img src="{{card.imgFood}}">
+            </div>
+            <div class="content-card">
+                <div class="food-name">
+                    <p>{{card.id}}</p>
+                </div>
+                <div class="autor-name">
+                    <p>{{card.autor}}</p>
+                </div>
+            </div>
         </div>
     {% endfor %}
 </div>

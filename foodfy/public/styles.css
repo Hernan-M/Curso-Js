@@ -12,6 +12,7 @@ a{
     margin: 30px;
 }
 
+
 body{
     display: flex;
     flex-direction: column;
@@ -107,6 +108,16 @@ header{
 .autor-name p{
     color: #999999;
     font-size: 0.75rem;
+}
+
+.container-about{
+    width: 69vw;
+    margin: 20px 0 150px 0;
+}
+
+.simple-text > p{
+    opacity: 0.8;
+    margin: 20px 0 30px 0;
 }
 
 footer{

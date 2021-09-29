@@ -26,7 +26,7 @@ server.get("/", function(req, res){
 })
 
 server.get("/about", function(req, res){
-    return res.render("about", { })
+    return res.render("about", {texts: article.texts})
 })
 
 server.get("/content", function(req, res){
