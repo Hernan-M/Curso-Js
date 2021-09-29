@@ -1,0 +1,17 @@
+{% extends "layout.njk" %}}
+
+{% block content %}
+<div class="container-cards">
+    {% for card in cards %}
+        <div class="card">
+                <div class="img-card">
+                <img src="{cards.imgFood}">
+                </div>
+                <div class="content-card">
+                    <h4>{{cards.id}}</h4>
+                    <p>{{cards.autor}}</p>
+                </div>
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}

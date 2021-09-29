@@ -7,39 +7,26 @@
         </div>
     </header>
     <section class="cards">
-        <div class="card" id="/mapas-com-react-usando-leaflet">
+        
+        {% for item in items %}
+
+        <div class="card {{ 'featured-wrapper' if item.isfeatured }}" id="{{item.id}}">
             <div class="card-img">
-                <img
-                    src="https://blog.rocketseat.com.br/content/images/2020/11/blog-thumb-utilizando-mapas-no-react-com-leaflet-1.jpg">
+                <img src="https://blog.rocketseat.com.br/content/images/{{item.id_img}}jpg" alt="Imagem de {{item.title}}">
             </div>
+            {% if item.isfeatured %}
+                <div class="featured">
+                    <p>Destaque</p>
+                </div>
+                {% endif %}
             <div class="card-info">
-                <h4>Mapas com React usando Leaflet.</h4>
-                <p>Autor: Thiago Marinho</p>
-                <p>11 min de leitura</p>
+                <h4>{{item.title}}</h4>
+                <p>Autor: {{item.autor}}</p>
+                <p>{{item.duration}}</p>
             </div>
         </div>
-        <div class="card" id="/como-renomear-varios-arquivos-de-uma-vez-usando-o-terminal">
-            <div class="card-img">
-                <img
-                    src="https://blog.rocketseat.com.br/content/images/2020/11/thumb-como-renomear-varios-arquivos-de-uma-vez-usando-o-terminal.jpg">
-            </div>
-            <div class="card-info">
-                <h4>Como renomear vários arquivos de uma vez usando o terminal.</h4>
-                <p>Autor: Thiago Marinho</p>
-                <p>2 min de leitura</p>
-            </div>
-        </div>
-        <div class="card" id="/nextjs-novidades-na-versao-10-e-atualizacao-do-blog-para-melhorar-a-performance">
-            <div class="card-img">
-                <img
-                    src="https://blog.rocketseat.com.br/content/images/2020/11/capa_visao-geral-sobre-next-js-na-versao-10-e-atualizacao-do-blog-para-melhorar-a-performance.jpg">
-            </div>
-            <div class="card-info">
-                <h4>Next.JS - Novidades na versão 10 e atualização do blog para melhorar a performance.</h4>
-                <p>Autor: Thiago Marinho</p>
-                <p>4 min de leitura</p>
-            </div>
-        </div>
+        {% endfor %}
+
     </section>
     <div class="modal-overlay">
         <div class="modal">

@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    margin: 30px;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    position: relative;
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 69vw;
+    margin: 20px 0px 20px 0;
+}
+
+.title > a {
+    font-size: 1.2rem;
+}
+.links{
+    margin-left: 80px;
+}
+
+.container-wrap {
+    background-color: #FBDFDB;
+    border-radius: 25px;
+    position: relative;
+    width: 69vw;
+    height: 50vh;
+    align-items: center;
+}
+
+.content-text{
+    margin-left: 45px;
+    margin-top: 100px;
+}
+
+.container-title{
+    font-size: 1.6rem;
+    padding-bottom: 15px;
+}
+.container-text{
+    opacity: 0.7;
+}
+
+
+.img-container img{
+    position: absolute;
+    right: 80px;
+    bottom: 0;
+    height: 90%;
+}
+
+.title-access{
+    margin: 50px 0 15px 0;
+    font-size: 1.25rem;
+    display: flex;
+    width: 69vw;
+    justify-content: left;
+    font-weight: 900;
+}
+.container-cards{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 90vw;
+    margin: 20px 0 80px 0;
+}
+
+
+.card{
+    width: 290px;
+    padding: 0 20px 20px 10px;
+}
+
+
+.img-card img{
+    width: 100%;
+    border-radius: 15px;
+}
+
+.content-card{
+    margin-bottom: 10px;
+}
+
+.food-name p{
+    font-size: 1.1rem;
+    margin: 15px 0 5px 0;
+}
+
+.autor-name p{
+    color: #999999;
+    font-size: 0.75rem;
+}
+
+footer{
+    position: absolute;
+    bottom: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 100%;
+    background-color: #EEEEEE;
+    color: #999999;
+    font-size: 0.8rem;
+}

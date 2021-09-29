@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css"> 
+    <title>Foodfy</title>
+</head>
+<body>
+    {% block header %}
+    <header>
+        <div class="title">
+            <a href="/" id="title"><h3>Foodfy</h3></a>
+            </div>
+        <div class="links">
+            <a href="/about" id="titulo">Sobre</a>
+            <a href="/content" id="titulo">Receitas</a>
+        </div>
+    </header>
+    {% endblock %}
+
+    {% block content %}
+    <div class="container-wrap">
+        <div class="content-text">
+            <div class="container-title"><h3>As melhores receitas</h3></div>
+            <div class="container-text"><p>Aprenda a construir os melhores pratos<br>
+            com receitas criadas por profissionais<br>
+            do mundo inteiro.</p></div>
+        </div>
+        <div class="img-container">
+        <img src="{{img}}"/>
+        </div>
+    </div>
+
+    <div class="title-access">
+        <h3>Mais acessadas</h3>
+    </div>
+
+    <div class="container-cards">
+    {% for card in cards %}
+        <div class="card">
+            <div class="img-card">
+            <img src="{{card.imgFood}}">
+            </div>
+            <div class="content-card">
+                <div class="food-name">
+                    <p>{{card.id}}</p>
+                </div>
+                <div class="autor-name">
+                    <p>{{card.autor}}</p>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+    </div>
+
+    {% endblock %}
+
+    {% block footer %}
+    <footer>
+        <p>Todos os direitos reservados, receitas Foodfy.</p>
+    </footer>
+    {% endblock %}
+</body>
+</html>

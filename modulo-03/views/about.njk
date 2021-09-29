@@ -9,10 +9,10 @@
     </header>
 
 <div class="img-perfil">
-    <img src="https://cdn-images-1.medium.com/max/1200/1*TkXVfLTwsHdwpUEjGzdi9w.jpeg">
+    <img src={{about.avatar_url}} alt="imagem de {{about.name}}">
 </div>
 <div class="nome-empresa">
-    <h1>Rocketseat</h1>
+    <h1>{{about.name}}</h1>
 </div>
 <div class="palavras">
     <div class="texto">
@@ -25,28 +25,21 @@
     <div class="lista">
         <ul>
             <h3>Principais Tecnologias:</h3>
-            <li>JavaScript</li>
-            <li>HTML</li>
-            <li>Css</li>
+            <li>{{about.first}}</li>
+            <li>{{about.second}}</li>
+            <li>{{about.third}}</li>
         </ul>
     </div>
 </div>
 <div class="rodape">
+    {% for link in about.links %}
     <div class="grow">
-        <a href="https://github.com/rocketseat-education" target="_blank">
-            <i class="fab fa-github"></i>
+        <a href="{{link.url}}" target="_blank">
+            <i class="{{link.icon}}"></i>
         </a>
     </div>
-    <div class="grow">
-        <a href="https://www.instagram.com/rocketseat_oficial/" target="_blank">
-            <i class="fab fa-instagram"></i>
-        </a>
-    </div>
-    <div class="grow">
-        <a href="https://www.facebook.com/rocketseat/" target="_blank">
-            <i class="fab fa-facebook-square"></i>
-        </a>
-    </div>
+    {% endfor %}
 </div>
+
 
 {% endblock %}

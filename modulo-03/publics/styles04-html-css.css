@@ -10,6 +10,8 @@
 :root {
   --color-rocket: #7159c1;
   --color-text: #f0f8ff;
+  --color-featured: black;
+  --background-color: rgba(0, 0, 0, 0.315);
 }
 
 a {
@@ -18,7 +20,7 @@ a {
 
 #titulo {
   text-decoration: none;
-  color: #f0f8ff;
+  color: var(--color-text);
 }
 
 .grow > a:hover {
@@ -27,7 +29,7 @@ a {
 }
 
 body {
-  background-color: #7159c1f8;
+  background-color: var(--color-rocket);
   align-items: center;
   justify-content: center;
   text-align: center;
@@ -38,7 +40,7 @@ header {
   width: 100 vw;
   padding: 20px;
   text-align: center;
-  background-color: rgba(0, 0, 0, 0.315);
+  background-color: var(--background-color);
   font-size: 40px;
   font-family: "Comfortaa", cursive;
 }
@@ -109,11 +111,11 @@ footer {
   gap: 40px;
 }
 
-.cards .card {
+.card {
   margin: 80px 0 0 55px;
   background-color: var(--color-text);
   width: 280px;
-  height: 320px;
+  height: 325px;
   border-radius: 5%;
   cursor: pointer;
   transition: all 0.3s ease-out;
@@ -132,7 +134,9 @@ footer {
   text-align: justify;
   font-size: 14px;
   margin: 18px;
+  margin-bottom: 25px;
   font-weight: 600;
+  align-items: center;
 }
 
 h4 {
@@ -140,15 +144,11 @@ h4 {
   font-size: 17px;
 }
 
-p {
-  margin-bottom: 10px;
-}
-
 /*overlays*/
 .modal-overlay {
-  background-color: rgba(0, 0, 0, 0.76);
-  width: 100%;
+  background-color: var(--background-color);
   height: 100%;
+  width: 100%;
   position: fixed;
   top: 0;
   opacity: 0;
@@ -170,7 +170,7 @@ p {
 
 .modal-overlay .modal .modal-close {
   position: absolute;
-  right: 18px;
+  right: 20px;
   top: 6px;
   cursor: pointer;
 }
@@ -180,7 +180,7 @@ p {
 /*maximizar*/
 .maximize {
   position: absolute;
-  bottom: 2px;
+  bottom: 0;
   right: 20px;
   cursor: pointer;
 }
@@ -238,4 +238,20 @@ iframe {
 .erro-message{
   margin: 70px 0 0 0;
   font-size: 20px;
+}
+
+/* destaque cards */
+.card.featured-wrapper{
+  position: relative;
+}
+
+.featured{
+    background-color: black;
+    color: var(--color-text);
+    position: absolute;
+    top: 3px;
+    right: 3px;
+    border-radius: 9px;
+    padding: 6px;
+    font-size: 13px;
 }
